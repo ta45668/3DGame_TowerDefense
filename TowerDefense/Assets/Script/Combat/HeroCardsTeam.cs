@@ -25,7 +25,7 @@ public class HeroCardsTeam : MonoBehaviour
     {
         for (int i = 0; i < heroDesigns.Length; i++)
         {
-            heroDesigns[i].prefab = Resources.Load("Hero3D/" + heroName[i], typeof(object)) as GameObject;
+            heroDesigns[i].prefab = Resources.Load("Hero/" + heroName[i], typeof(object)) as GameObject;
             heroDesigns[i].cont = heroDesigns[i].prefab.GetComponent<HeroDesign3D>().price;
             HeroDesigns[i] = heroDesigns[i];
 

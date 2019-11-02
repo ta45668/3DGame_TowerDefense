@@ -1,35 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class 關卡管理 : MonoBehaviour
+public class InterfaceUI : MonoBehaviour
 {
     private static bool EndGamebool;
-
-    public GameObject gameoverUI;
-
-    void Start()
+    public GameObject pauseScreenUI;
+    private void Start()
     {
         EndGamebool = false;
     }
-    void Update()
+
+    private void Update()
     {
         if (EndGamebool)
             return;
-        /*if (分數.主塔血量 <= 0)
+        if (HP.totalHP <= 0)
         {
-            EndGame();
-        }*/
+            EndGamebool = true;
+            StopTime(pauseScreenUI);
+        }
     }
 
-    void EndGame()
-    {
-        EndGamebool = true;
-        時間(gameoverUI);
-    }
-
-    public void 時間(GameObject ui)
+    private void StopTime(GameObject ui)
     {
         ui.SetActive(!ui.activeSelf);
         if (ui.activeSelf)
@@ -44,12 +36,13 @@ public class 關卡管理 : MonoBehaviour
 
     public void Retry(GameObject ui)
     {
-        時間(ui);
+        StopTime(ui);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     public void Menu(GameObject ui)
     {
-        時間(ui);
+        StopTime(ui);
         SceneManager.LoadScene("主畫面");
     }
 }

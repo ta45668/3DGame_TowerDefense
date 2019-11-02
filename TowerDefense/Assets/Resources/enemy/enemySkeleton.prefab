@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  hp: 10
+  hp: 100
   money: 50
   deathParticle: {fileID: 593206175957647052, guid: fe49b77823ec0e5428e184d07ac7162a,
     type: 3}
