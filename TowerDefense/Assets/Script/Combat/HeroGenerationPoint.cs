@@ -35,27 +35,25 @@ public class HeroGenerationPoint : MonoBehaviour
         return transform.position + adjustmentHero;
     }
 
-    /// <summary>
-    /// 顯示金錢是否足夠的顏色
-    /// </summary>
+
+    // 判斷點位是否有英雄存在 沒有的話傳點的位子給GHM做生成
     private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
-            return;//是否滑鼠有在物件上
+            return;//在UI上點擊到的點會直接跳出
 
         if (!GHM.SetJudge)
-            return;//是否有英雄要設置 有往下 沒跳出
+            return;//是否有英雄要設置 有>往下 沒>跳出
         if (hero !=null)
         {
+            //拉動卻發現這位子有人了
             return;
         }
         GHM.SetEnemyPosition(this);
         
     }
 
-    /// <summary>
-    /// 指向生成點時改變它的顏色來確認
-    /// </summary>
+    //指向生成點時改變它的顏色來確認
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
