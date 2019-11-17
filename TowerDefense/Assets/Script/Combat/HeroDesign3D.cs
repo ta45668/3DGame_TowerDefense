@@ -19,6 +19,7 @@ public class HeroDesign3D : MonoBehaviour
     [Tooltip("波及到範圍")] public float spreadRange ;
     [Tooltip("攻擊傷害值")] public int attackValue ;
     [Tooltip("英雄價格")] public int price = 1;
+    [Tooltip("英雄攻擊動畫")] public Animator heroAinmator;
 
     private float attackIntervalTime = 0f; //用來計算攻擊間隔時間
     private Transform attackTarget; //鎖定目標
@@ -102,6 +103,8 @@ public class HeroDesign3D : MonoBehaviour
     /// </summary>
     private void AttackLockingTarget()
     {
+        Debug.Log("攻擊");
+        //heroAinmator.SetBool("Fit", true);//播放攻擊動畫
         //建立攻擊
         GameObject openFire = (GameObject)Instantiate(attackSkill, heroAttack.position, heroAttack.rotation);
         HeroAccack heroAccack = openFire.GetComponent<HeroAccack>();
@@ -116,7 +119,8 @@ public class HeroDesign3D : MonoBehaviour
     /// </summary>
     private void AttackIntervalTime()
     {
-        
+        Debug.Log("結束");
+        //heroAinmator.SetBool("Fit", false);//取消動畫
         attackIntervalTime = 1f / attackSpeed;
         
     }

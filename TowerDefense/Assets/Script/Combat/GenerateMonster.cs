@@ -11,7 +11,8 @@ public class GenerateMonster : MonoBehaviour
     [Tooltip("敵人產生位置")] public Transform generateLocation;
 
     [Tooltip("間格時間")] public float waveInterval = 5;
-    [Tooltip("敵人數量")] public int enemyQuantity = 0;
+    [Tooltip("目前敵人生成數量")] public int enemyQuantity = 0;
+    [Tooltip("敵人最大生成數量")] public int enemyMax = 5;
     private float reciprocalTime = 5f;//倒數的時間
 
     #endregion
@@ -41,7 +42,8 @@ public class GenerateMonster : MonoBehaviour
     /// <returns></returns>
     IEnumerator EceryGenerateQuantity()
     {
-        enemyQuantity++;//每次加1個敵人
+        enemyQuantity = Random.Range(1, enemyMax + 1);//怪物隨機亂數
+        //enemyQuantity++;//每次加1個敵人
         for (int i = 0; i < enemyQuantity; i++)
         {
             EnemyGenerateLocation();//敵人生成

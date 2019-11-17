@@ -57,6 +57,7 @@ MonoBehaviour:
   spreadRange: 5
   attackValue: 50
   price: 10
+  heroAinmator: {fileID: -8168034611280173823}
 --- !u!95 &-8168034611280173823
 Animator:
   serializedVersion: 3
