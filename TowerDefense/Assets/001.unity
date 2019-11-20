@@ -222,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124667853}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 0.21988197, z: -9.110076}
+  m_LocalPosition: {x: 0, y: 0.72, z: -8.69}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.1}
   m_Children:
   - {fileID: 639816191}
@@ -244,9 +244,10 @@ MonoBehaviour:
   hero: {fileID: 124667858}
   count: {x: 0, y: 0, z: 0}
   test01: {x: 0, y: 0, z: 0}
-  test02: {x: 0, y: 0, z: 0}
-  test03: {x: 0, y: -1, z: 0}
-  myHero: {fileID: 1290504940}
+  test03: {x: 0, y: -0.6, z: 0.8}
+  test04: {x: 0, y: 0, z: 0}
+  heroTr: {x: 0, y: 0, z: 0}
+  myHero: {fileID: 1501331160}
 --- !u!1 &445258217
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445258217}
   m_LocalRotation: {x: 0.20523115, y: -0, z: -0, w: 0.9787135}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -617,7 +618,7 @@ PrefabInstance:
     - target: {fileID: 8894912001424336157, guid: f95b3de148ee7d44c9b3c18cb609306a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.27
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 8894912001424336157, guid: f95b3de148ee7d44c9b3c18cb609306a,
         type: 3}
@@ -662,17 +663,17 @@ PrefabInstance:
     - target: {fileID: 8894912001424336157, guid: f95b3de148ee7d44c9b3c18cb609306a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8894912001424336157, guid: f95b3de148ee7d44c9b3c18cb609306a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8894912001424336157, guid: f95b3de148ee7d44c9b3c18cb609306a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95b3de148ee7d44c9b3c18cb609306a, type: 3}
@@ -686,6 +687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172197601}
   - component: {fileID: 1172197600}
+  - component: {fileID: 1172197602}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -706,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero:
-  - {fileID: 1290504937}
+  - {fileID: 1501331156}
   heroCard:
   - {fileID: 1252001296}
 --- !u!4 &1172197601
@@ -723,6 +725,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1172197602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172197599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f935af4eadc04ed4680c7fdf290423be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouse: {x: 0, y: 0}
 --- !u!1 &1252001296
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,8 +774,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 7507949205bf691459cd5a1e5a68dcbc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -798,18 +811,98 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 8, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1290504937 stripped
+--- !u!1 &1501331156
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8894912001424336159, guid: f95b3de148ee7d44c9b3c18cb609306a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1104865206}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1290504940 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1501331160}
+  - component: {fileID: 1501331159}
+  - component: {fileID: 1501331158}
+  - component: {fileID: 1501331157}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &1501331157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501331156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1501331158
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501331156}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c104c50c4d23a394f8a27f8f77eed6a5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1501331159
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501331156}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1501331160
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8894912001424336157, guid: f95b3de148ee7d44c9b3c18cb609306a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1104865206}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501331156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.60317135, y: -2.0413208, z: -1.0366098}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614538043
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,8 +989,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614538043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -984,8 +1077,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1688393833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,8 +1095,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1052,8 +1141,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   - eventID: 8
     callback:
       m_PersistentCalls:
@@ -1069,5 +1156,3 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
