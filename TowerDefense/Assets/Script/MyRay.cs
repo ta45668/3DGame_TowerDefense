@@ -34,7 +34,7 @@ public class MyRay : MonoBehaviour
             //Debug.Log(ray);
             test01 = new Vector3(hero.position.x, hero.position.y, hero.position.z);//查看位置
             count = test04;
-            myHero.position = new Vector3((Input.mousePosition.x - 10) / 33.5f -7.5f, count.y - 0.25f, (Input.mousePosition.y - 10) / 14 - 5.0f);//英雄顯示位置
+            myHero.position = new Vector3(15.0f * (Input.mousePosition.x / 1280) - 7.5f, count.y - 0.25f, 15.0f * (Input.mousePosition.y / 360.0f));//英雄顯示位置
             //Debug.DrawLine(hero.transform.position, count , Color.red, 0.1f, true);//出現射線(在UNITY的編輯器裡)
             Debug.Log(hit.transform.name);//射到的東西名稱
             Debug.DrawRay(hero.transform.position, transform.forward * 10, Color.blue);
