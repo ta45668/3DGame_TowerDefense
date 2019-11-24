@@ -30,14 +30,14 @@ public class Test3 : MonoBehaviour
     /// <summary>
     /// 完成物件拖移(還需要了解程式碼)
     /// </summary>
-    void OnMouseDown()
+    void OnMouseDown()//當點擊螢幕的時候
     {
         v3_TargetPos = Camera.main.WorldToScreenPoint(hero.position);
         v3_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, v3_TargetPos.z);
         v3_NewPos = Camera.main.ScreenToWorldPoint(v3_MousePos);
-        hero.position = new Vector3(v3_NewPos.x, -5.0f, v3_NewPos.z);
+        hero.position = new Vector3(v3_NewPos.x, -5.0f, v3_NewPos.z);//-5.0=角色站在地板的高度
     }
-    void OnMouseDrag()
+    void OnMouseDrag()//當滑動螢幕的時候
     {
         v3_TargetPos = Camera.main.WorldToScreenPoint(hero.position);
         v3_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, v3_TargetPos.z);
